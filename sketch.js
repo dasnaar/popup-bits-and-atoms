@@ -63,7 +63,7 @@ function draw() {
                 pos.y = random(0, height);
             }
 
-            if (mouseIsPressed && mouseX + 19 > 130 && mouseY + 19 > 198) {
+            if (mouseIsPressed && mouseX > 130 && mouseX < 306 && mouseY > 151 && mouseY < 245) {
 
                 sceneIndex = 1;
 

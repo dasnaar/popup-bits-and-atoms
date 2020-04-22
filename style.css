@@ -5,13 +5,14 @@
 }
 
 body {
-    min-height: 100vh;
+    position: relative;
+    width: 437px;
+    height: 306px;
     font-family: 'Lato', sans-serif;
     margin: 0;
-    overflow: hidden;
 }
 
-.sidebar {
+#sidebar {
     color: #fff;
     position: absolute;
     left: 0;
@@ -19,9 +20,11 @@ body {
     height: 30vh;
     padding: 5px;
     z-index: 1000;
+    display: none;
+
 }
 
-.sidebar ul {
+#sidebar ul {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -32,27 +35,27 @@ body {
     height: 100%;
 }
 
-.sidebar ul li {
+#sidebar ul li {
     padding: 5px 0;
 }
 
-.sidebar input, .sidebar button {
+#sidebar input, .sidebar button {
     text-align: center;
     width: 45px;
 }
 
-.sidebar li:last-of-type {
+#sidebar li:last-of-type {
     margin-top: auto;
 }
 
-.sidebar button {
+#sidebar button {
     background-color: transparent;
     border: none;
     color: #ffffff;
     font-size: 20px;
 }
 
-.sidebar label {
+#sidebar label {
     display: block;
     font-size: 12px;
     margin-bottom: 3px;
@@ -60,9 +63,9 @@ body {
 
 .secretButton {
     position: absolute;
-    width: 30px;
-    height: 28px;
-    left: 200px;
-    top: 225px;
+    width: 176px;
+    height: 47px;
+    left: 130px;
+    top: 198px;
     opacity: 0.5;
 }

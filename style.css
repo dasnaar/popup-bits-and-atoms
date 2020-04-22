@@ -58,3 +58,11 @@ body {
     margin-bottom: 3px;
 }
 
+.secretButton {
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    left: 200px;
+    top: 225px;
+    opacity: 0.5;
+}

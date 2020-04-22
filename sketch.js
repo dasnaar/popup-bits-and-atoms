@@ -41,17 +41,23 @@ function draw() {
 
     function startScreen(){
 
+        push()
             fill('#000181')
             rect(4,11,426,41)
             image(closePopup, pos.x,pos.y)
             image(confirmButton, 130,198)
-           /* textFont(myFont, 19);
-            text('X', pos.x, pos.y)
-            text('Click OK to become immortal', 90, 97);
-            text('Click X to get the fuck out', 98, 131);
-            text('OK', 204, 228);
             pop()
-            */
+        push()
+            fill(255)
+             textFont(myFont, 19);
+            text('Sign up', 18, 40)
+        pop()
+            push()
+        textFont(myFont, 19);
+        fill(0)
+            text('Im not a robot', 130, 103);
+            pop()
+
             if (mouseIsPressed && mouseX + 14 > pos.x && mouseY + 14 > pos.y) {
                 pos.x = random(0, width);
                 pos.y = random(0, height);
@@ -69,6 +75,7 @@ function draw() {
 
     function startMaze(){
 
+        background('#2E0D74')
 
         if(mouseX < 437 && mouseY < 305){
             background(colorInput.value)
@@ -78,7 +85,7 @@ function draw() {
         }
 
         if (colorInput.value=='#ffffff'){
-            image(birdfree,200,152)
+            image(birdfree,166,88)
         }
 
         else {

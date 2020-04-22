@@ -75,14 +75,8 @@ function draw() {
 
     function startMaze(){
 
-        background('#2E0D74')
-
-        if(mouseX < 437 && mouseY < 305){
             background(colorInput.value)
 
-
-
-        }
 
         if (colorInput.value=='#ffffff'){
             image(birdfree,166,88)
@@ -90,7 +84,7 @@ function draw() {
 
         else {
 
-            image(bird, 149, 72);
+            image(bird, 148, 62);
 
         }
 

@@ -5,16 +5,18 @@ const paths = [];
 let currentPath = [];
 
 var pos = {
-    x: 396,
-    y: 34
+    x: 386,
+    y: 14
 }
 
 let myFont;
 function preload(){
 
-    myFont = loadFont('comic.ttf');
+    myFont = loadFont('ms-sans-serif.ttf');
     bird = loadImage('bird.png')
     birdfree = loadImage('birdfree.png')
+    closePopup = loadImage('x.png')
+    confirmButton = loadImage('confirmbutton.png')
 }
 
 let sceneIndex = 0;
@@ -25,7 +27,7 @@ function setup() {
 
 function draw() {
     noFill();
-    background('#2E0D74');
+    background('#C0C0C0');
 
     if (sceneIndex == 0){
         startScreen();
@@ -39,21 +41,23 @@ function draw() {
 
     function startScreen(){
 
-            push()
-            fill('#00E0FF');
-            textFont(myFont, 19);
+            fill('#000181')
+            rect(4,11,426,41)
+            image(closePopup, pos.x,pos.y)
+            image(confirmButton, 130,198)
+           /* textFont(myFont, 19);
             text('X', pos.x, pos.y)
             text('Click OK to become immortal', 90, 97);
             text('Click X to get the fuck out', 98, 131);
             text('OK', 204, 228);
             pop()
-
-            if (mouseIsPressed && mouseX + 19 > pos.x && mouseY + 19 > pos.y) {
+            */
+            if (mouseIsPressed && mouseX + 14 > pos.x && mouseY + 14 > pos.y) {
                 pos.x = random(0, width);
                 pos.y = random(0, height);
             }
 
-            if (mouseIsPressed && mouseX + 19 > 204 && mouseY + 19 > 228) {
+            if (mouseIsPressed && mouseX + 19 > 130 && mouseY + 19 > 198) {
 
                 sceneIndex = 1;
 
